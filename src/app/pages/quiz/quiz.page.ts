@@ -28,7 +28,6 @@ export class QuizPage implements OnInit {
         this.currenQuestion = 0;
         this.score = 0;
         this.copiedQuestion = this.shuffle(copy);
-        console.log(this.copiedQuestion);
         if (this.copiedQuestion.length === 0) {
             this.route.navigateByUrl('/');
         }
@@ -83,7 +82,6 @@ export class QuizPage implements OnInit {
                     cssClass: 'secondary',
                     handler: () => {
                         this.route.navigate(['home']);
-                        console.log('Confirm Cancel: blah');
                     }
                 }
             ]
