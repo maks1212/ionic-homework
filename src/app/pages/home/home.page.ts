@@ -11,12 +11,17 @@ export class HomePage {
 
     public ausgabe: string;
 
-    constructor(private data: DataService, private router: Router) {
+    constructor(private data: DataService,
+                private router: Router) {
         this.ausgabe = this.data.getText();
     }
 
-  public showList() {
-      this.router.navigateByUrl('/question-list');
-  }
+    public showList() {
+        this.router.navigateByUrl('/question-list');
+    }
+
+    public startQuiz() {
+        this.router.navigateByUrl('/quiz');
+    }
 
 }

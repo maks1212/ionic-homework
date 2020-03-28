@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Quiz</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{copiedQuestion[currenQuestion].title}}</ion-title>
+    <ion-label>Score: {{score}}</ion-label>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Question: {{currenQuestion + 1}}</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
 
+    <ion-button shape="round" expand="block" fill="outline" color="primary" (click)="checkAnswer(1)">{{copiedQuestion[currenQuestion].a1}}</ion-button>
+    <ion-button shape="round" expand="block" fill="outline" color="primary" (click)="checkAnswer(2)">{{copiedQuestion[currenQuestion].a2}}</ion-button>
+    <ion-button shape="round" expand="block" fill="outline" color="primary" (click)="checkAnswer(3)">{{copiedQuestion[currenQuestion].a3}}</ion-button>
+    <ion-button shape="round" expand="block" fill="outline" color="primary" (click)="checkAnswer(4)">{{copiedQuestion[currenQuestion].a4}}</ion-button>
+  </ion-list>
 </ion-content>
