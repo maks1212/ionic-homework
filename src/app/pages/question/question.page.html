@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/question-list"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{question.title}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Question:</ion-label>
+            <ion-input type="text" [(ngModel)]="question.title"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Answer 1:</ion-label>
+            <ion-input type="text" [(ngModel)]="question.a1"></ion-input>
+            <ion-button (click)="setCorrect(1)">set correct</ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-label>Answer 2:</ion-label>
+            <ion-input type="text" [(ngModel)]="question.a2"></ion-input>
+            <ion-button (click)="setCorrect(2)">set correct</ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-label>Answer 3:</ion-label>
+            <ion-input type="text" [(ngModel)]="question.a3"></ion-input>
+            <ion-button (click)="setCorrect(3)">set correct</ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-label>Answer 4:</ion-label>
+            <ion-input type="text" [(ngModel)]="question.a4"></ion-input>
+            <ion-button (click)="setCorrect(4)">set correct</ion-button>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Correct Answer: {{question.correct}}</ion-label>
+        </ion-item>
+
+    </ion-list>
+</ion-content>
